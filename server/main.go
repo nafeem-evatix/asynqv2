@@ -27,7 +27,7 @@ func main() {
 	mux := asynq.NewServeMux()
 	mux.Use(middlewares.Log)
 
-	// Define a task handler for the welcome email task.
+	// Define a task handler for the printer.
 	mux.HandleFunc(
 		printer.TaskName, // task type
 		printer.Handler,  // handler function
